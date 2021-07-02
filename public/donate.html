@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Charity | Donate</title>
+    <meta name="author" content="Abhisneha" />
+    <link rel="icon" type="image/png" href="../images/icon.png" />
+
+    <!-- Old Stylesheets and Scripts Starts -->
+    <link rel="stylesheet" href="../css/animate.css" />
+    <link rel="stylesheet" href="../css/icomoon.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/superfish.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/modernizr-2.6.2.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/340cef720c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Old Stylesheet and Scripts ends  -->
+
+    <!-- new style and scripts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.0.0-5a9c68d/tailwind.min.css"
+      integrity="sha512-XgPcoW5S5ESFTO59Iy12VrhVngtzvQiLUKgp4JG3h1NVLPbdcNBNKELTswD/zDt4MEo98e7f16D/S07Arix11g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- new style and scripts ends -->
+  </head>
+  <body>
+    <!-- Firebase SDK starts  -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-performance.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth__en.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css"
+    />
+    <script src="../js/firebase.js"></script>
+    <!-- Firebase SDK ends  -->
+
+    <div id="fh5co-wrapper">
+      <div id="fh5co-page">
+        <header id="fh5co-header-section" class="sticky-banner">
+          <div class="container">
+            <div class="nav-header">
+              <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"
+                ><i></i
+              ></a>
+              <h1 id="fh5co-logo"><a href="index.html">Charity</a></h1>
+              <nav id="fh5co-menu-wrap" role="navigation">
+                <ul class="sf-menu" id="fh5co-primary-menu">
+                  <li id="signIn">
+                    <a href="./signin.html"
+                      ><span style="cursor: pointer"> Sign In</span></a
+                    >
+                  </li>
+                  <li id="logout">
+                    <a><span style="cursor: pointer"> Logout</span></a>
+                  </li>
+                  <li id="profile"><a href="./profile.html">Profile</a></li>
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
+                  <li><a href="./statistics.html">Statistics</a></li>
+                  <li>
+                    <a href="./donations.html">Donations</a>
+                  </li>
+                  <li><a href="./map.html">Map</a></li>
+                  <li><a href="./blogs.html">Blogs</a></li>
+                  <li class="active">
+                    <a href="./donate.html">Donate</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        <div class="fh5co-hero">
+          <div class="fh5co-overlay"></div>
+          <div
+            class="fh5co-cover text-center flex h-screen"
+            data-stellar-background-ratio="0.5"
+            style="
+              background-image: url(https://picsum.photos/1280/720?random=1);
+            "
+          >
+            <div class="desc animate-box">
+              <h2><strong>Contact</strong> us</h2>
+              <br />
+              <span
+                ><a class="btn btn-primary btn-lg" href="#what-to-donate"
+                  >Donate Now</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div id="fh5co-feature-product" class="fh5co-section-gray">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center heading-section">
+                <h3>How we started.</h3>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="text-center">
+                <button class="btn btn-default filter-button" data-filter="all">
+                  All
+                </button>
+                <button
+                  class="btn btn-default filter-button"
+                  data-filter="hdpe"
+                >
+                  HDPE Pipes
+                </button>
+                <button
+                  class="btn btn-default filter-button"
+                  data-filter="sprinkle"
+                >
+                  Sprinkle Pipes
+                </button>
+                <button
+                  class="btn btn-default filter-button"
+                  data-filter="spray"
+                >
+                  Spray Nozzle
+                </button>
+                <button
+                  class="btn btn-default filter-button"
+                  data-filter="irrigation"
+                >
+                  Irrigation Pipes
+                </button>
+              </div>
+              <br />
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  hdpe
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=1"
+                  class="img-responsive"
+                />
+                <div class="w-full flex text-center py-2 font-semibold">
+                  <div class="w-1/2">Worth: <span id="price">500</span></div>
+                  <div class="w-1/2 hover:underline">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      class="to_set_donation_amount"
+                    >
+                      Donate now
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  sprinkle
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=2"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  hdpe
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=3"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  irrigation
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=4"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  spray
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=5"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  irrigation
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=6"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  spray
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=7"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  irrigation
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=8"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  irrigation
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=9"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  hdpe
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=10"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  spray
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=11"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="
+                  pb-4
+                  gallery_product
+                  col-lg-3 col-md-4 col-sm-4 col-xs-6
+                  filter
+                  sprinkle
+                "
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=12"
+                  class="img-responsive"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal-->
+        <div
+          class="modal fade"
+          id="get_receiver_info"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header flex justify-between">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  Please enter Details
+                </h5>
+                <button
+                  type="button"
+                  class="close pb-8"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form
+                  class="bg-white p-6 rounded"
+                  name="receiver_form_data_name"
+                  id="receiver_form_data_id"
+                  onsubmit="receiver_form_data_id_fun(event)"
+                >
+                  <div class="mb-8">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label
+                          class="
+                            block
+                            uppercase
+                            tracking-wide
+                            text-gray-700 text-xl
+                            font-bold
+                            mb-2
+                          "
+                          for="grid-name"
+                        >
+                          Name
+                        </label>
+                        <input
+                          class="
+                            appearance-none
+                            block
+                            w-full
+                            bg-gray-200
+                            text-gray-700
+                            rounded
+                            py-3
+                            px-4
+                            mb-3
+                            leading-tight
+                            focus:outline-none focus:bg-white
+                          "
+                          id="grid-name"
+                          type="text"
+                          placeholder="Donee Name"
+                          name="name"
+                          required
+                        />
+                      </div>
+                      <div class="w-full md:w-1/2 px-3">
+                        <label
+                          class="
+                            block
+                            uppercase
+                            tracking-wide
+                            text-gray-700 text-xl
+                            font-bold
+                            mb-2
+                          "
+                          for="grid-email"
+                        >
+                          Email
+                        </label>
+                        <input
+                          class="
+                            appearance-none
+                            block
+                            w-full
+                            bg-gray-200
+                            text-gray-700
+                            border border-gray-200
+                            rounded
+                            py-3
+                            px-4
+                            leading-tight
+                            focus:outline-none
+                            focus:bg-white
+                            focus:border-gray-500
+                          "
+                          id="grid-email"
+                          type="email"
+                          placeholder="example@email.com"
+                          name="email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label
+                          class="
+                            block
+                            uppercase
+                            tracking-wide
+                            text-gray-700 text-xl
+                            font-bold
+                            mb-2
+                          "
+                          for="grid-amount"
+                        >
+                          Amount
+                        </label>
+                        <input
+                          class="
+                            appearance-none
+                            block
+                            w-full
+                            bg-gray-200
+                            text-gray-700
+                            border border-gray-200
+                            rounded
+                            py-3
+                            px-4
+                            leading-tight
+                            focus:outline-none
+                            focus:bg-white
+                            focus:border-gray-500
+                          "
+                          id="grid-amount"
+                          type="text"
+                          name="amount"
+                          readonly
+                          required
+                        />
+                      </div>
+                      <div class="w-full md:w-1/2 px-3">
+                        <label
+                          class="
+                            block
+                            uppercase
+                            tracking-wide
+                            text-gray-700 text-xl
+                            font-bold
+                            mb-2
+                          "
+                          for="grid-giftID"
+                        >
+                          Gift Name
+                        </label>
+                        <div class="relative">
+                          <input
+                            class="
+                              appearance-none
+                              block
+                              w-full
+                              bg-gray-200
+                              text-gray-700
+                              border border-gray-200
+                              rounded
+                              py-3
+                              px-4
+                              leading-tight
+                              focus:outline-none
+                              focus:bg-white
+                              focus:border-gray-500
+                            "
+                            id="grid-giftID"
+                            type="text"
+                            name="giftID"
+                            value="giftID-001"
+                            readonly
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label
+                          class="
+                            block
+                            uppercase
+                            tracking-wide
+                            text-gray-700 text-xl
+                            font-bold
+                            mb-2
+                          "
+                          for="grid-mobile"
+                        >
+                          Mobile
+                        </label>
+                        <input
+                          class="
+                            appearance-none
+                            block
+                            w-full
+                            bg-gray-200
+                            text-gray-700
+                            rounded
+                            py-3
+                            px-4
+                            mb-3
+                            leading-tight
+                            focus:outline-none focus:bg-white
+                          "
+                          id="grid-name"
+                          type="text"
+                          placeholder="Mobile"
+                          name="mobile"
+                          required
+                        />
+                      </div>
+                      <div class="w-full md:w-1/2 px-3">
+                        <label
+                          class="
+                            block
+                            uppercase
+                            tracking-wide
+                            text-gray-700 text-xl
+                            font-bold
+                            mb-2
+                          "
+                          for="grid-dob"
+                        >
+                          Date of Birth
+                        </label>
+                        <div class="relative">
+                          <input
+                            class="
+                              appearance-none
+                              block
+                              w-full
+                              bg-gray-200
+                              text-gray-700
+                              rounded
+                              py-3
+                              px-4
+                              mb-3
+                              leading-tight
+                              focus:outline-none focus:bg-white
+                            "
+                            id="grid-dob"
+                            type="date"
+                            placeholder="Birth Date"
+                            name="dob"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-2">
+                      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label
+                          class="
+                            block
+                            uppercase
+                            tracking-wide
+                            text-gray-700 text-xl
+                            font-bold
+                            mb-2
+                          "
+                          for="grid-city"
+                        >
+                          City
+                        </label>
+                        <input
+                          class="
+                            appearance-none
+                            block
+                            w-full
+                            bg-gray-200
+                            text-gray-700
+                            border border-gray-200
+                            rounded
+                            py-3
+                            px-4
+                            leading-tight
+                            focus:outline-none
+                            focus:bg-white
+                            focus:border-gray-500
+                          "
+                          id="grid-city"
+                          type="text"
+                          placeholder="Kolkata"
+                          name="city"
+                          required
+                        />
+                      </div>
+                      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label
+                          class="
+                            block
+                            uppercase
+                            tracking-wide
+                            text-gray-700 text-xl
+                            font-bold
+                            mb-2
+                          "
+                          for="grid-state"
+                        >
+                          State
+                        </label>
+                        <input
+                          class="
+                            appearance-none
+                            block
+                            w-full
+                            bg-gray-200
+                            text-gray-700
+                            border border-gray-200
+                            rounded
+                            py-3
+                            px-4
+                            leading-tight
+                            focus:outline-none
+                            focus:bg-white
+                            focus:border-gray-500
+                          "
+                          id="grid-state"
+                          type="text"
+                          placeholder="West Bengal"
+                          name="state"
+                          required
+                        />
+                      </div>
+                      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label
+                          class="
+                            block
+                            uppercase
+                            tracking-wide
+                            text-gray-700 text-xl
+                            font-bold
+                            mb-2
+                          "
+                          for="grid-zip"
+                        >
+                          Zip
+                        </label>
+                        <input
+                          class="
+                            appearance-none
+                            block
+                            w-full
+                            bg-gray-200
+                            text-gray-700
+                            border border-gray-200
+                            rounded
+                            py-3
+                            px-4
+                            leading-tight
+                            focus:outline-none
+                            focus:bg-white
+                            focus:border-gray-500
+                          "
+                          id="grid-zip"
+                          type="text"
+                          placeholder="700001"
+                          name="zip"
+                        />
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-2 pt-4">
+                      <div class="pl-4">
+                        <label class="inline-flex items-center">
+                          <input
+                            type="checkbox"
+                            class="form-checkbox"
+                            id="checkbox"
+                            name="is_subscribed"
+                          />
+                          <span class="ml-2 pt-2 text-sm"
+                            >Subscribe to get Notification on Upcoming
+                            Birthday</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="reset"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                      Continue
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Successful payments -->
+        <div id="successful_payment_popup" class="modal fade">
+          <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="icon-box">
+                  <i class="material-icons">&#xE876;</i>
+                </div>
+                <h4 class="modal-title">Thanks For Your Donation!</h4>
+              </div>
+              <div class="modal-body">
+                <p class="text-center">
+                  Your Donation has been confirmed. Check your email for more
+                  details.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <a href="./index.html">
+                  <button
+                    class="btn btn-success btn-block"
+                    data-dismiss="modal"
+                  >
+                    OK
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <div id="footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                  <p class="fh5co-social-icons">
+                    <a href="https://twitter.com/TarunKamboj_" target="_blank"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a
+                      href="https://linkedin.com/in/kambojtarun"
+                      target="_blank"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="mailto:kambojtarun02@gmail.com" target="_blank"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                    <a href="https://Tarun-Kamboj.github.io" target="_blank"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                    <a href="https://github.com/Tarun-Kamboj" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </p>
+                  <p>
+                    Copyright 2021. All Rights Reserved. <br /><i
+                      class="fas fa-code"
+                    ></i>
+                    with <i class="fas fa-heart"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!--External Scripts Starts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.waypoints.min.js"></script>
+    <script src="../js/sticky.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/hoverIntent.js"></script>
+    <script src="../js/superfish.js"></script>
+    <script src="../js/main.js"></script>
+    <!--External Scripts Ends -->
+
+    <!-- new scripts starts -->
+    <script src="./script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- new scripts ends  -->
+
+    <script>
+      //------------filtering the things starts---------//
+      $(document).ready(function () {
+        $(".filter-button").click(function () {
+          var value = $(this).attr("data-filter");
+
+          if (value == "all") {
+            //$('.filter').removeClass('hidden');
+            $(".filter").show("1000");
+          } else {
+            //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+            //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter")
+              .not("." + value)
+              .hide("3000");
+            $(".filter")
+              .filter("." + value)
+              .show("3000");
+          }
+        });
+
+        if ($(".filter-button").removeClass("active")) {
+          $(this).removeClass("active");
+        }
+        $(this).addClass("active");
+      });
+      //-------filtering the things ends---------//
+
+      //--------setting the donation amount starts-------//
+      $(document).ready(function () {
+        $(".to_set_donation_amount").click(function () {
+          firebase.auth().onAuthStateChanged(function (user) {
+            console.log(user);
+            if (user) $("#get_receiver_info").modal("show");
+            else window.location.replace("./signin.html");
+          });
+          document.getElementById("grid-amount").defaultValue =
+            document.getElementById("price").innerHTML;
+        });
+      });
+      //-----setting the donation amount ends---------//
+
+      //----------get donation field data starts------//
+      function receiver_form_data_id_fun(event) {
+        event.preventDefault();
+        const get_user_form = document.forms["receiver_form_data_name"];
+        const currentTime = new Date().toLocaleString("en-US", {
+          timeZone: "Asia/Kolkata",
+        });
+        const currentDate = new Date().toLocaleDateString();
+
+        let current_user = "";
+        firebase.auth().onAuthStateChanged(function (user) {
+          current_user = user;
+        });
+
+        var options = {
+          key: "rzp_test_r7VJUj0HXmx418",
+          amount: parseInt(get_user_form.amount.value) * 100,
+          currency: "INR",
+          name: `Gift ID-${get_user_form.giftID.value}`,
+          description: "Wish You very happy life Ahead",
+          image: "./images/icon.png", // Replace this with the order_id created using Orders API (https://razorpay.com/docs/api/orders).
+          handler: function (response) {
+            on_successful_payment(
+              response,
+              current_user,
+              currentTime,
+              currentDate,
+              get_user_form
+            );
+            // $("#myModal").modal();
+          },
+          prefill: {
+            name: current_user.displayName,
+            email: current_user.email,
+            contact: current_user.phoneNumber,
+          },
+          notes: {
+            time: currentTime,
+            date: currentDate,
+            userId: current_user.uid,
+          },
+          theme: {
+            color: "#9932CC",
+          },
+        };
+        var propay = new Razorpay(options);
+        propay.open();
+
+        return false;
+      }
+
+      function on_successful_payment(
+        response,
+        current_user,
+        currentTime,
+        currentDate,
+        get_user_form
+      ) {
+        firebase
+          .database()
+          .ref(`users/Donor/${current_user.uid}/donee`)
+          .push({
+            current_time: currentTime,
+            current_date: currentDate,
+            donee_name: get_user_form.name.value,
+            donee_email: get_user_form.email.value,
+            donee_mobile: get_user_form.mobile.value,
+            donee_dob: get_user_form.dob.value,
+            donee_city: get_user_form.city.value,
+            donee_state: get_user_form.state.value,
+            donee_zip: get_user_form.zip.value,
+            is_notify: get_user_form.is_subscribed.checked,
+            payment_id: response.razorpay_payment_id,
+          })
+          .then(function () {
+            $("#get_receiver_info").modal("hide");
+            document.getElementById("successful_payment_popup").style.display =
+              "block";
+          });
+      }
+
+      //---------get donation field data ends---------//
+    </script>
+  </body>
+</html>

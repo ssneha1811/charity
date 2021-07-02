@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Charity | About</title>
+    <meta name="author" content="Abhisneha" />
+    <link rel="icon" type="image/png" href="../images/icon.png" />
+
+    <!-- Old Stylesheets and Scripts Starts -->
+    <link rel="stylesheet" href="../css/animate.css" />
+    <link rel="stylesheet" href="../css/icomoon.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/superfish.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/modernizr-2.6.2.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/340cef720c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Old Stylesheet and Scripts ends  -->
+
+    <!-- new style and scripts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.0.0-5a9c68d/tailwind.min.css"
+      integrity="sha512-XgPcoW5S5ESFTO59Iy12VrhVngtzvQiLUKgp4JG3h1NVLPbdcNBNKELTswD/zDt4MEo98e7f16D/S07Arix11g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- new style and scripts ends -->
+  </head>
+  <body>
+    <!-- Firebase SDK starts  -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-performance.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth__en.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css"
+    />
+    <script src="../js/firebase.js"></script>
+    <!-- Firebase SDK ends  -->
+
+    <div id="fh5co-wrapper">
+      <div id="fh5co-page">
+        <header id="fh5co-header-section" class="sticky-banner">
+          <div class="container">
+            <div class="nav-header">
+              <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"
+                ><i></i
+              ></a>
+              <h1 id="fh5co-logo"><a href="index.html">Charity</a></h1>
+              <nav id="fh5co-menu-wrap" role="navigation">
+                <ul class="sf-menu" id="fh5co-primary-menu">
+                  <li id="signIn">
+                    <a href="./signin.html"
+                      ><span style="cursor: pointer"> Sign In</span></a
+                    >
+                  </li>
+                  <li id="logout">
+                    <a><span style="cursor: pointer"> Logout</span></a>
+                  </li>
+                  <li id="profile"><a href="./profile.html">Profile</a></li>
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
+                  <li><a href="./statistics.html">Statistics</a></li>
+                  <li>
+                    <a href="./donations.html">Donations</a>
+                  </li>
+                  <li><a href="./map.html">Map</a></li>
+                  <li><a href="./blogs.html">Blogs</a></li>
+                  <li class="active">
+                    <a href="./donate.html">Donate</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        <div class="fh5co-hero">
+          <div class="fh5co-overlay"></div>
+          <div
+            class="fh5co-cover text-center"
+            data-stellar-background-ratio="0.5"
+            style="
+              background-image: url(https://picsum.photos/1280/720?random=1);
+            "
+          >
+            <div class="desc animate-box">
+              <h2><strong>About</strong> us</h2>
+              <br />
+              <span
+                ><a class="btn btn-primary btn-lg" href="./donate.html"
+                  >Donate Now</a
+                ></span
+              >
+              <div
+                class="text-white text-xl text-extrabold"
+                style="color: #fff"
+              >
+                <div class="flex justify-center text-4xl">
+                  You've been here for
+                  <span id="counter" class="text-blue-800"> </span> minutes.
+                </div>
+                <div class="flex justify-center text-4xl">
+                  Estimated amount of people that passed away:
+                  <span id="death" class="text-red-600"> </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="fh5co-feature-product" class="fh5co-section-gray">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center heading-section">
+                <h3>How we started.</h3>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+              </div>
+            </div>
+
+            <div class="row row-bottom-padded-md">
+              <div class="col-md-12 text-center animate-box">
+                <p>
+                  <img
+                    src="https://picsum.photos/1280/720?random=2"
+                    class="img-responsive"
+                  />
+                </p>
+              </div>
+              <div class="col-md-6 text-center animate-box">
+                <p>
+                  <img
+                    src="https://picsum.photos/1280/720?random=3"
+                    class="img-responsive"
+                  />
+                </p>
+              </div>
+              <div class="col-md-6 text-center animate-box">
+                <p>
+                  <img
+                    src="https://picsum.photos/1280/720?random=4"
+                    class="img-responsive"
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="fh5co-features">
+          <div class="container">
+            <div class="row">
+              <div
+                class="
+                  col-md-8 col-md-offset-2
+                  text-center
+                  heading-section
+                  animate-box
+                "
+              >
+                <h3>Leadership</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Velit est facilis maiores, perspiciatis accusamus asperiores
+                  sint consequuntur debitis.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <div class="fh5co-team text-center animate-box">
+                  <figure>
+                    <img src="../images/profile_img.jpg" alt="user" />
+                  </figure>
+                  <div>
+                    <h3>Tarun Kamboj</h3>
+                    <p><span>Founder</span></p>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia, there live the blind
+                      texts. Far far away, behind the word mountains, far from
+                      the countries Vokalia and Consonantia, there live the
+                      blind texts.
+                    </p>
+                  </div>
+                  <p class="fh5co-social-icons">
+                    <a href="https://twitter.com/TarunKamboj_" target="_blank"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a
+                      href="https://linkedin.com/in/kambojtarun"
+                      target="_blank"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="https://Tarun-Kamboj.github.io" target="_blank"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4"></div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <div
+            class="flex w-full justify-around"
+            style="background-color: rgba(0, 0, 0, 0.04)"
+          >
+            <div class="w-full text-center">
+              <div class="">
+                <h2 class="footer-heading mb-4">About Us</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+                  modi, quaerat laborum id fugit blanditiis ratione delectus
+                  assumenda.
+                </p>
+              </div>
+            </div>
+            <div class="w-full">
+              <div class="">
+                <h2 class="">Features</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-full">
+              <div class="">
+                <h2 class="">Subscribe to Newsletter</h2>
+                <form action="#" method="post" class="">
+                  <div class="input-group mb-3 flex">
+                    <input type="text" class="" placeholder="Enter Email" />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-primary text-white"
+                        type="button"
+                        id="button-addon2"
+                      >
+                        Subscribe
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="flex">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="#about-section" class="smoothscroll pl-0 pr-3"
+                  ><span class="icon-facebook"></span
+                ></a>
+                <a href="#" class="pl-3 pr-3"
+                  ><span class="icon-twitter"></span
+                ></a>
+                <a href="#" class="pl-3 pr-3"
+                  ><span class="icon-instagram"></span
+                ></a>
+                <a href="#" class="pl-3 pr-3"
+                  ><span class="icon-linkedin"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="py-4">
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Abhisneha, All Rights Reserved
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!--External Scripts Starts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.waypoints.min.js"></script>
+    <script src="../js/sticky.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/hoverIntent.js"></script>
+    <script src="../js/superfish.js"></script>
+    <script src="../js/main.js"></script>
+    <!--External Scripts Ends -->
+
+    <script>
+      firebase.auth().onAuthStateChanged(function (user) {
+        //   user ? handleSignedInEdit(user) : window.open("./index.html", "_self");
+        user ? handleSignedInUser(user) : handleSignedOutUser(user);
+        function handleSignedInUser(user) {
+          console.log("User is LoggedIn");
+          document.getElementById("signIn").style.display = "none";
+          $("#logout").attr("style", "display: block");
+          $("#profile").attr("style", "display: block");
+        }
+        function handleSignedOutUser(user) {
+          console.log("User is Not LoggedIn");
+          $("#signIn").attr("style", "display: block");
+          $("#logout").attr("style", "display: none !important");
+          $("#profile").attr("style", "display: none !important");
+        }
+      });
+      let isUser = firebase.auth().currentUser;
+      if (isUser) {
+        console.log("User is LoggedIn");
+        document.getElementById("signIn").style.display = "none";
+        $("#logout").attr("style", "display: block");
+        $("#profile").attr("style", "display: block");
+      } else {
+        console.log("User is Not LoggedIn");
+        $("#signIn").attr("style", "display: block");
+        $("#logout").attr("style", "display: none !important");
+        $("#profile").attr("style", "display: none !important");
+      }
+    </script>
+
+    <!-- new scripts starts -->
+    <script src="./script.js"></script>
+    <!-- new scripts ends  -->
+  </body>
+</html>
